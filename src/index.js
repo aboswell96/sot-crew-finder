@@ -17,7 +17,7 @@ function Emissaries(props) {
         );
     });
 
-    return(<div>{emissariesComponents}</div>);
+    return(<div class="emissary-list">{emissariesComponents}</div>);
 }
 
 // ========================================
