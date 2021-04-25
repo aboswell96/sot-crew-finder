@@ -14,10 +14,23 @@ img.emissary {
     padding: 5px;
 }
 
-.emissary-list {
+.emissary-panel {
+    border: 5px #cdf9d9;
+    border-style: solid;
+    margin-top: 15px;
+    width: 1000px;
+}
+
+.emissary-desc {
     width: 825px;
 }
 
 .root {
-    background-color: rgb(0, 42, 38);
+    background-color: #002a26;
+}
+
+.emissary-list {
+    width : 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
