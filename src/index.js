@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Emissary from './Emissary.js';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import * as constants from './constants/constants.js';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Emissaries(props) {
+
+    var emissariesComponents = constants.emissaries.map((emissary, index) => {
+        return (
+            <Emissary
+                emissary_name={emissary.name}
+                emissary_desc={emissary.desc}
+                emissary_img={emissary.img}
+            />
+        );
+    });
+
+    return(<div>{emissariesComponents}</div>);
+}
+
+// ========================================
+
+ReactDOM.render(<div class="root"><Emissaries/></div>, document.getElementById("root"));
